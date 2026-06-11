@@ -1,12 +1,8 @@
-variable "cidr" {
-    description = " The CIDR block for the VPC"
-    type = string
-    default = "10.0.0.0/16"
-}
-
-
-variable "vpc_name" {
-    description = " The value for the name tag of the VPC"
-    type = string
-    default = "Production_vpc"
-}
+variable "aws_region" { type = string }
+variable "environment" { type = string }
+variable "vpc_cidr" { type = string }
+variable "public_subnet_1_cidr" { type = string }
+variable "public_subnet_2_cidr" { type = string }
+variable "private_subnet_1_cidr" { type = string }
+variable "private_subnet_2_cidr" { type = string }
+variable "single_nat_gateway" { type = bool }
