@@ -56,7 +56,7 @@ resource "aws_nat_gateway" "nat_1" {
 
 resource "aws_nat_gateway" "nat_2" {
   count         = var.single_nat_gateway ? 0 : 1
-  allocation_id = aws_eip.nat_2.id
+  allocation_id = aws_eip.nat_2[0].id
   subnet_id     = aws_subnet.public_2.id
   tags          = { Name = "${var.environment}-nat-gw-2" }
 }
