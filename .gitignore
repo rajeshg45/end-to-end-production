@@ -1,15 +1,28 @@
 # macOS system files
 .DS_Store
 
-# Local Terraform directories
-.terraform/
-.terraform.lock.hcl
+# Local .terraform directories containing downloaded modules and providers
+**/.terraform/*
 
-# Terraform state files
+# .tfstate files containing your infrastructure deployment records
 *.tfstate
-*.tfstate.backup
+*.tfstate.*
 
-# Terraform variables (might contain passwords/secrets)
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all variable definitions files that might contain secrets
+# (Remove the line below if you intentionally want to track terraform.tfvars)
 *.tfvars
 *.tfvars.json
 
+# Override files containing localized parameter overrides
+*.override.tf
+*.override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files containing private credentials
+.terraformrc
+terraform.rc
