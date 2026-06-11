@@ -1,0 +1,15 @@
+# macOS system files
+.DS_Store
+
+# Local Terraform directories
+.terraform/
+.terraform.lock.hcl
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Terraform variables (might contain passwords/secrets)
+*.tfvars
+*.tfvars.json
+
